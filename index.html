@@ -43,8 +43,8 @@
 	<h2 class="header">Parametarized predefined SPARQL queries</h2>
 	<center>
 		<div class="article" style="margin-top:-20px;">
-			<select id="chartType" onchange="showHideOptionsDiv(this.value);">
-				<option value="">Select a chart type</option>
+			<select id="chartType" onChange="showHideOptionsDiv(this.value);">
+				<option value="">Select a query </option>
 				<option value="a">Type 01 - List all events in the "field" that took place between "dates" in "country"</option>
 				<option value="b">Type 02 - List the events related to "field" with an "acceptance rate"</option>
 				<option value="c">Type 03 - List the number of submitted and accepted papers of the "series" since "date"</option>
@@ -64,7 +64,7 @@
 			<input type="date" id="a_to_date" value="2019-03-24"> in
 			<select id="a_country"></select>&nbsp;&nbsp;
 			<!--Chart Type&nbsp;&nbsp;<select id="a_chart_type"></select-->
-			<input type="button" value="Generate Query" onclick="generateAQuery();">
+			<input type="button" value="Generate Query" onClick="generateAQuery();">
 		</div>
 		<div id="b_options" style="display: none; margin-top:20px;" class="options">
 			List the events related to
@@ -80,7 +80,7 @@
 			&nbsp;
 			<input type="text" id="b_acrate" value="0.50" style="width:30px;" />&nbsp;&nbsp;
 			<!--Chart Type&nbsp;&nbsp;<select id="b_chart_type"></select-->
-			<input type="button" value="Generate Query" onclick="generateBQuery();" />
+			<input type="button" value="Generate Query" onClick="generateBQuery();" />
 		</div>
 		<div id="c_options" style="display: none; margin-top:20px;" class="options">
 			List the number of submitted and accepted papers of the series
@@ -88,20 +88,20 @@
 			&nbsp;since&nbsp;
 			<input type="date" id="c_date" value="2013-01-01" /> &nbsp;&nbsp;&nbsp;
 			<!--Chart Type&nbsp;&nbsp;<select id="c_chart_type"></select-->
-			<input type="button" value="Generate Query" onclick="generateCQuery(false);" />
+			<input type="button" value="Generate Query" onClick="generateCQuery(false);" />
 		</div>
 		<div id="d_options" style="display: none; margin-top:20px;" class="options">
 			List the top-
 			<input type="text" id="d_count" value="10" style="width:30px;"> countries host most of the events in computer science research communities. &nbsp;&nbsp;&nbsp;
 			<!--Chart Type&nbsp;&nbsp;<select id="d_chart_type"></select-->
-			<input type="button" value="Generate Query" onclick="generateDQuery();" />
+			<input type="button" value="Generate Query" onClick="generateDQuery();" />
 		</div>
 		<div id="e_options" style="display: none; margin-top:20px;" class="options">
 			List the subfields of CS where
 			<select id="e_country"></select>&nbsp; has hosted more events since
 			<input type="date" id="e_date" value="2013-01-01" /> &nbsp;&nbsp;&nbsp;
 			<!--Chart Type&nbsp;&nbsp;<select id="e_chart_type"></select-->
-			<input type="button" value="Generate Query" onclick="generateEQuery();" />
+			<input type="button" value="Generate Query" onClick="generateEQuery();" />
 		</div>
 		<div id="f_options" style="display: none; margin-top:20px;" class="options">
 			Acceptance rate of the series
@@ -109,7 +109,7 @@
 			&nbsp;since&nbsp;
 			<input type="date" id="f_date" value="2013-01-01" /> &nbsp;&nbsp;&nbsp;
 			<!--Chart Type&nbsp;&nbsp;<select id="c_chart_type"></select-->
-			<input type="button" value="Generate Query" onclick="generateCQuery(true);" />
+			<input type="button" value="Generate Query" onClick="generateCQuery(true);" />
 		</div>
 		<div id="g_options" style="display: none; margin-top:20px;" class="options">
 				List the series that occur in the month of &nbsp;
@@ -119,7 +119,7 @@
 				&nbsp;since&nbsp;
 				<input type="date" id="f_date" value="2013-01-01" /> &nbsp;&nbsp;&nbsp;
 				<!--Chart Type&nbsp;&nbsp;<select id="c_chart_type"></select-->
-				<input type="button" value="Generate Query" onclick="generateGQuery();" />
+				<input type="button" value="Generate Query" onClick="generateGQuery();" />
 			</div>
 		<div id="h_options" style="display: none; margin-top:20px;" class="options">
 			Geographical distribution of series &nbsp;
@@ -129,7 +129,7 @@
 			&nbsp;since&nbsp;
 			<input type="date" id="f_date" value="2013-01-01" /> &nbsp;&nbsp;&nbsp;
 			<!--Chart Type&nbsp;&nbsp;<select id="c_chart_type"></select-->
-			<input type="button" value="Generate Query" onclick="generateHQuery();" />
+			<input type="button" value="Generate Query" onClick="generateHQuery();" />
 		</div>
 		<div id="i_options" style="display: none; margin-top:20px;" class="options">
 				Field productivity for CS research communities in the Year&nbsp;
@@ -138,7 +138,7 @@
 				&nbsp;since&nbsp;
 				<input type="date" id="f_date" value="2013-01-01" /> &nbsp;&nbsp;&nbsp;
 				<!--Chart Type&nbsp;&nbsp;<select id="c_chart_type"></select-->
-				<input type="button" value="Generate Query" onclick="generateIQuery();" />
+				<input type="button" value="Generate Query" onClick="generateIQuery();" />
 			</div>
 		<div id="j_options" style="display: none; margin-top:20px;" class="options">
 			Top&nbsp;
@@ -148,10 +148,10 @@
 			&nbsp;since&nbsp;
 			<input type="date" id="f_date" value="2013-01-01" /> &nbsp;&nbsp;&nbsp;
 			<!--Chart Type&nbsp;&nbsp;<select id="c_chart_type"></select-->
-			<input type="button" value="Generate Query" onclick="generateJQuery();" />
+			<input type="button" value="Generate Query" onClick="generateJQuery();" />
 		</div>
 		<div style="display: none; margin-top:20px;" id="query_button_div">
-			<input type="button" value="Hide Query" id="query_show" onclick="showHideQueryBox(this.value);"/>
+			<input type="button" value="Hide Query" id="query_show" onClick="showHideQueryBox(this.value);"/>
 		</div>
 		<div style="display: none; margin-top:20px;" id="query_div">
 			<textarea id="query"></textarea>
@@ -160,7 +160,7 @@
 			Chart Type&nbsp;&nbsp;<select id="chart_type"></select>
 			<br>
 			<br>
-			<input type="button" value="Construct Chart" id="chart_button" onclick="sendRequest();">
+			<input type="button" value="Construct Chart" id="chart_button" onClick="sendRequest();">
 		</div>
 		
 		<div id="chart_area"></div>
